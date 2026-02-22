@@ -14,4 +14,5 @@
 
 # GDscript(python과 유사한 문법)
 - 하나의 Node에는 하나의 script만 넣을 수 있다.
-- 바꿔말하면 script는 Node에 속해야만 실행된다. scrip 파일만으로는 아무런 의미가 없다.(Node도 Scene에 속해야만 의미를 갖는다.)
+- 바꿔말하면 script는 Node에 속해야만 실행된다. scrip 파일만으로는 아무런 의미가 없다.
+- Node도 Scene에 속해야만 의미를 갖는다.
