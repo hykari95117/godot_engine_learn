@@ -27,6 +27,7 @@ var arr = [1, "a", "가"];
 # function & return
 func func1(input):
 	print(input);
+
 func func2() -> String:
 	return "func2 리턴값";
 
@@ -55,7 +56,64 @@ func _ready() -> void: # _ready라는 네이티브 함수를 override
 	# function & return
 	func1("func1 호출");
 	print(func2());
+	
+	# 조건문
+	condition()
+	
+	# 반복문
+	loop()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass # 통과(아무것도 안하고 그냥 통과시킨다.)
+	
+# 조건문
+func condition():
+	const age1 = 10;
+	const age2 = 20;
+	# 조건문
+	if false:
+		pass;
+	elif age1 < age2:
+		print('age2 is big');
+	elif age1 > age2:
+		print('age1 is big');
+	else:
+		print('동갑');
+	
+	# match 조건문(switch와 유사)
+	match age1:
+		10:
+			print('ten');
+		20:
+			print('ten * 2');
+		_: # 위의 모든 조건들이 만족되지 않았을 때 실행
+			print('how old are you:');
+
+# 반복문
+func loop():
+	# for
+	for i in range(11, 13):
+		print(i); # 11~12 출력
+	
+	for i in [3,6,9]:
+		print(i) # 3 ,6 ,9 출력
+
+	for char in "Hello":
+		if char == 'H' :
+			continue; # 'H'는 아래 내용(print) 무시 후 이어서 반복
+		print(char);
+
+	# while
+	var 남은기름 = 10;
+	var 이동거리 = 0;
+
+	while 남은기름 > 0:
+		이동거리 = 이동거리 + 1;
+		남은기름 = 남은기름 - 1;
+		print("남은기름 = ", 남은기름);
+
+		if 남은기름 <= 3:
+			break; # 남은 기름이 3 이하이면 운전 그만
+
+	print("총 이동거리 = ", 이동거리);
